@@ -1,0 +1,53 @@
+<!-- Jai shree ram -->
+<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="index.css">
+    <title>COUNTER</title>
+</head>
+
+<body>
+    <div>
+        <h1>COUNTER</h1>
+        <h2 id="count-el">0</h2>
+        <button id="increment-btn" onclick="increment()">
+            INCREMENT
+        </button>
+        <button id="save-btn" onclick="save()">
+            SAVE
+        </button>
+        <h3 id="showw"></h3>
+    </div>
+    <script>
+        src = "index.js"
+        let count = 0
+        let count2 = 0
+        let show = 'Previous lap'
+        function increment() {
+            console.log("button was clicked")
+            count = count + 1
+            document.getElementById("count-el").innerHTML = count
+            count2 = 1
+        }
+        let ans = ''
+        function save() {
+            if (count2 || count == 0) {
+                ans = ans + ' - ' + count
+                let ans2 = 'Previous entries:'
+                let ans3 = ans2 + ans
+                document.getElementById("showw").innerHTML = ans3
+                count2 = 0
+            }
+            // console.log(show + ' - ' + count)
+        }
+
+    </script>
+</body>
+
+</html>
